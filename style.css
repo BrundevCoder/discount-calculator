@@ -12,6 +12,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #424546;
+  overflow: hidden;
 }
 
 .container {
@@ -23,7 +24,7 @@ body {
   padding: 1.2rem;
 }
 
-h1, p, label {
+h1, p, label, input {
   color: #fff;
   font-family: "Outfit", Arial;
 }
@@ -76,7 +77,49 @@ label {
 }
 
 .discontIcon {
+  background: linear-gradient(
+    to left bottom,
+    #f74728 30%, #ffb13d 75%
+  );
+  background-size: 100% 100%;
+  background-clip: text;
+  color: transparent;
   padding-top: -.5rem;
+  animation: animBackgroundIcon 2s ease infinite;
+}
+
+.input {
+  font-size: 1.1rem;
+  padding: .5rem;
+  background: #000;
+  border-radius: 8px;
+  border: none;
+  color:#00ff00;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #00ff0085;
+}
+
+.payoutPara {
+  margin-top: 2rem;
+  font-size: 1.35rem;
+}
+
+#moneyFallContainer {
+  position: absolute;
+  inset: 0;
+  padding: 0.25rem;
+  z-index: -1;
+}
+
+.money {
+  position: absolute;
+  color: #0cb30c;
+  font-size: 6rem;
+  font-family: "Outfit", Arial;
+  animation: fall 1.25s ease forwards;
 }
 
 @media (max-width: 421px) {
@@ -89,4 +132,11 @@ label {
 @keyframes animBackgroundIcon {
   0%, 100% {background-size: 100% 100%;}
   50% {background-size: 222% 222%;}
+}
+
+@keyframes fall {
+  100% {
+    transform: translateX(100%) translateY(500%);
+    opacity: 0;
+  }
 }
