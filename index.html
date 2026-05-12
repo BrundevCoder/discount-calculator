@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A website where you can calculate the price you will pay with discounts!">
+  <meta name="author" content="Bruno Diniz">
+  <meta name="keywords" content="Discount, Calculator">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Discount Calculator</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="intro">
+      <h1>Discount Calculator</h1>
+      <span class="material-symbols-outlined graphic">finance</span>
+    </div>
+
+    <p>Calculate how much you will have to pay with discounts!</p>
+
+    <div class="input-group">
+      <input placeholder="19.99" id="priceInput" type="number">
+      <label for="priceInput">Price</label>
+    </div>
+
+    <div class="input-group">
+      <input placeholder="25" id="discountInput" type="number">
+      <label for="discountInput">Discount <span class="material-symbols-outlined">percent_discount</span> </label>
+    </div>
+
+    <p>You will pay: <span id="price">$0</span> </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
