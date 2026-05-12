@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: #424546;
 }
 
 .container {
@@ -18,10 +19,17 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 23px;
+  padding: 1.2rem;
 }
 
 h1, p, label {
+  color: #fff;
   font-family: "Outfit", Arial;
+}
+
+p {
+  text-align: center;
 }
 
 .intro {
@@ -32,5 +40,53 @@ h1, p, label {
 .graphic {
   margin-left: 0.5rem;
   padding-top: 0.3rem;
+  background: linear-gradient(
+    to right bottom,
+    #00ff00, #00ffff
+  );
+  background-clip: text;
+  color: transparent;
+  background-size: 100% 100%;
+  animation: animBackgroundIcon 3s ease infinite;
 }
 
+h1 {
+  text-align: center;
+  color: #00ffff;
+}
+
+.inputs-container {
+  margin-top: 1.25rem;
+  padding: 0.2rem;
+  display: flex;
+  gap: 10px;
+  border: 3px solid #000;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.discontIcon {
+  padding-top: -.5rem;
+}
+
+@media (max-width: 421px) {
+  .inputs-container {
+    flex-direction: column;
+  }
+}
+
+
+@keyframes animBackgroundIcon {
+  0%, 100% {background-size: 100% 100%;}
+  50% {background-size: 222% 222%;}
+}
